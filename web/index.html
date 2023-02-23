@@ -34,7 +34,13 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
+    var serviceWorkerVersion = '2624461729';
+    let useHtml = true;
+    if(useHtml) {
+      window.flutterWebRenderer = "html";
+    } else {
+      window.flutterWebRenderer = "canvaskit";
+    }
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
